@@ -1,1 +1,11 @@
+// go安装命令
+// 环境变量设置
+ENV GOPATH=/gopath
+ENV GOROOT=/usr/local/go
+ENV GO111MODULE=on
 
+RUN wget https://go.dev/dl/go1.18.10.linux-amd64.tar.gz \
+    && tar -zxf go1.18.10.linux-amd64.tar.gz -C /usr/local/ \
+    && rm -rf go1.18.10.linux-amd64.tar.gz \
+    && chmod 777 /usr/local/bin/ \
+    && chmod 777 /usr/local/
